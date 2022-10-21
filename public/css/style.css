@@ -8,6 +8,7 @@
     --text-color-light:#fff;
     --box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     --border: 1px solid #eee;
+    --danger: #e74c3c;
 }
 
 *{
@@ -16,9 +17,15 @@
     box-sizing: border-box;
     font-family: var(--font-familiy);
 }
-body{
+body, html{
     background-color: var(--backgroud-light);
     font-size: 10px;
+}
+ul{
+    list-style: none;
+}
+h1{
+    margin-bottom: 1rem;
 }
 
 /* Container */
@@ -27,6 +34,42 @@ body{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+/* Text */
+.text-danger{
+    color: var(--danger);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 5px 0;
+}
+
+/* Buttons */
+.btn{
+    background: #fff;
+    font-weight: 700;
+    color: var(--text-color);
+    font-size: 1.6rem;
+    border: 0;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin: 0 5px;
+    box-shadow: var(--box-shadow);
+}
+.btn-primary{
+    background: var(--primary);
+    color: var(--text-color-light);
+}
+.btn-danger{
+    background-color: var(--danger);
+    color: var(--text-color-light);
+}
+.btn-small{
+    padding: 5px 10px;
+}
+.low-opacity{
+    opacity: 0.5;
 }
 
 /* Header */
@@ -73,4 +116,35 @@ footer{
 }
 .todo-container h1{
     text-align: center;
+}
+
+/* Form */
+.todo-form{
+    display: flex;
+    align-items: center;
+    flex-direction: row nowrap;
+    margin-bottom: 10px;
+}
+.todo-form input{
+    flex: 1;
+    margin-right: 0.5rem;
+    border: var(--border);
+    border-radius: 3px;
+    padding: 10px 15px;
+}
+
+/* Todo list */
+.todo-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    padding: 0.3rem 1.5rem ;
+}
+.todo-item:nth-child(odd){
+    background-color: var(--backgroud-light);
+}
+.todo-name{
+    flex: 1;
+    margin-right: 0.5rem;
 }
